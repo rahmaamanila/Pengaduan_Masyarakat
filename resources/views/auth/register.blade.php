@@ -57,7 +57,7 @@
                                 <select class="form-control" name="province_id">
                                     <option value="">Pilih Provinsi</option>
                                         @foreach($provinces as $p)
-                                        <option value="{{ $p->province_id }}">{{ $p->name }}</option>
+                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
                                         @endforeach
                                 </select>
                                             
@@ -73,7 +73,7 @@
                                 <select class="form-control" name="regency_id">
                                     <option value="">Pilih Kota</option>
                                         @foreach($regencies as $p)
-                                        <option value="{{ $p->regency_id }}">{{ $p->name }}</option>
+                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
                                         @endforeach
                                 </select>
                                             
@@ -89,7 +89,7 @@
                                 <select class="form-control" name="district_id">
                                     <option value="">Pilih Kecamatan</option>
                                         @foreach($districts as $p)
-                                        <option value="{{ $p->district_id }}">{{ $p->name }}</option>
+                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
                                         @endforeach
                                 </select>
                                             
@@ -105,7 +105,7 @@
                                 <select class="form-control" name="village_id">
                                     <option value="">Pilih Kecamatan</option>
                                         @foreach($villages as $p)
-                                        <option value="{{ $p->village_id }}">{{ $p->name }}</option>
+                                        <option value="{{ $p->id }}">{{ $p->name }}</option>
                                         @endforeach
                                 </select>
                                             
