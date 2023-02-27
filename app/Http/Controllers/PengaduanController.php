@@ -36,21 +36,26 @@ class PengaduanController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
     		'tgl_pengaduan' => 'required',
     		'nik' => 'required',
             'isi_laporan' => 'required',
-            'foto' => 'required',
-            'status' => 'required'
+            'foto' => 'required'
     	]);
- 
+
+
+        $imgName = $request->foto->getClientOriginalName() . '-' . time() . '.' . $request->foto->extension();
+        $request->foto->move(public_path('image'), $imgName);
+        
         Pengaduan::create([
     		'tgl_pengaduan' => $request->tgl_pengaduan,
     		'nik' => $request->nik,
             'isi_laporan' => $request->isi_laporan,
-            'foto' => $request->foto,
-            'status' => $request->status,
+            'foto' => $imgName
     	]);
+
+        
  
     	return redirect('/pengaduan');
     }
@@ -63,7 +68,8 @@ class PengaduanController extends Controller
      */
     public function show($id)
     {
-        //
+        $pengaduan = Pengaduan::where('id_pengaduan',$id)->first();
+        return view('pengaduan.show', compact('pengaduan'));
     }
 
     /**

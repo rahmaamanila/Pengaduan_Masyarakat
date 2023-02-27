@@ -21,7 +21,9 @@
                             <tr>
                                 <th>Tanggal Pengaduan</th>
                                 <th>NIK</th>
-                                <th>Alamat</th>
+                                <th>Laporan</th>
+                                <th>Foto</th>
+                                <th>Status</th>
                                 <th>OPSI</th>
                             </tr>
                         </thead>
@@ -31,8 +33,11 @@
                                 <td>{{ $p->tgl_pengaduan }}</td>
                                 <td>{{ $p->nik }}</td>
                                 <td>{{ $p->isi_laporan }}</td>
+                                <td><img src="{{ asset('image/'. $p->foto ) }}" height="10%" width="20%" alt=""></td>
+                                <td>{{ $p->status }}</td>
                                 <td>
                                     <a href="/pengaduan/edit/{{ $p->id_pengaduan }}" class="btn btn-warning">Edit</a>
+                                    <a href="/pengaduan/show/{{ $p->id_pengaduan }}" class="btn btn-success">detail</a>
                                     <a href="/pengaduan/delete/{{ $p->id_pengaduan }}" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>

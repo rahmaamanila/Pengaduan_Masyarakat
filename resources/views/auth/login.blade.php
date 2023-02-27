@@ -21,6 +21,10 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Login</button>
                             </div>
+                            <hr>
+                            <div class="form-group text-center">
+                                <a href="/register">Belum punya akun?</a>
+                            </div>
                         </form>
                     </div>
                 </div>

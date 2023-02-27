@@ -115,10 +115,13 @@
                                     </div>
                                 @endif
                             </div>
-
                             <br>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary form-control">Register</button>
+                            </div>
+                            <hr>
+                            <div class="form-group text-center">
+                                <a href="/login">Login</a>
                             </div>
                         </form>
                     </div>

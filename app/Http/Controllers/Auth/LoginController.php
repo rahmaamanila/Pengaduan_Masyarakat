@@ -16,7 +16,7 @@ class LoginController extends Controller
     {
         $auth = request()->only('username', 'password');
         if (Auth()->guard('masyarakat')->attempt($auth)) {
-            return redirect()->to('/');
+            return redirect()->to('/pengaduan');
         }
     }
 }

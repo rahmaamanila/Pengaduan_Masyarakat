@@ -10,4 +10,9 @@ class MasyarakatController extends Controller
     {
         return view('index');
     }
+
+    public function landing()
+    {
+        return view('landing');
+    }
 }
