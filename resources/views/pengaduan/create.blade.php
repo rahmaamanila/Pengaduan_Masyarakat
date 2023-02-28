@@ -16,7 +16,7 @@
                     <a href="#" class="ud-main-btn ud-login-btn">
                     {{Auth()->guard('masyarakat')->user()->nama}}
                     </a>
-                    <a class="ud-main-btn ud-white-btn" href="#">
+                    <a class="ud-main-btn ud-white-btn" href="/logout">
                         Log Out
                     </a>
                 </div>

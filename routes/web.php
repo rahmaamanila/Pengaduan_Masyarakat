@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/landing', 'MasyarakatController@landing')->name('masyarakat.landing');
 Route::get('/register', 'Auth\\RegisterController@RegisterFormMasyarakat');
@@ -23,6 +23,9 @@ Route::post('/register/store', 'Auth\\RegisterController@RegisterMasyarakat')->n
 
 Route::get('login', 'Auth\\LoginController@FormLoginMasyarakat');
 Route::post('login/post', 'Auth\\LoginController@LoginMasyarakat')->name('masyarakat.login');
+Route::get('/logout', 'Auth\\LoginController@logout')->name('logout'); 
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::middleware('masyarakat')->group(function() {
 
