@@ -49,19 +49,19 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">Home</a>
+                                        <a class="page-scroll" href="#">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#features">Features</a>
+                                        <a class="page-scroll" href="#">Features</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
+                                        <a class="page-scroll" href="#">About</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
                             
                             <div class="navbar-btn d-none d-sm-inline-block">
-                                <a class="main-btn" data-scroll-nav="0" href="#">Register</a>
+                                <a class="main-btn" data-scroll-nav="0" href="/register">Register</a>
                             </div>
                         </nav> <!-- navbar -->
                     </div>
@@ -207,7 +207,4 @@
 -->
     
     <!--====== PART ENDS ======-->
-
-</body>
-
-</html>
+@endsection
